@@ -1,12 +1,29 @@
 form {
-    border: 1px solid #545454;
-    border-radius: 3px;
-    padding: 40px;
+  background-color: #f0d43a;
+  border: 1px solid #545454;
+  border-radius: 3px;
+  padding: 40px;
 }
 
 input {
-    padding: 5px 20px;
+    padding: 20px 20px;
     width: 100%;
+    font-size: 75%;
     line-height: 16px;
     margin: 10px 0;
+    text-align: center;
+}
+
+button {
+    background: #7D407D;
+    color: #fff;
+    font-size: 18px;
+    text-transform: uppercase;
+    border: none;
+    margin: 20px 0 15px;
+    padding: 10px 15px;
+}
+
+button:hover {
+    background: #ff665a;
 }
