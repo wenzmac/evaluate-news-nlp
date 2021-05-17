@@ -1,5 +1,8 @@
 import { checkForName } from './js/nameChecker'
 import { handleSubmit } from './js/formHandler'
+import { rankScore } from './js/sentimentScore'
+import { updateUI } from './js/updateUI'
+
 
 import './styles/resets.scss'
 import './styles/base.scss'
@@ -16,5 +19,7 @@ console.log(checkForName);
 
 export {
  checkForName,
- handleSubmit
+ handleSubmit,
+ rankScore,
+ updateUI
 }

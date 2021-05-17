@@ -1,23 +1,38 @@
 @import url('https://fonts.googleapis.com/css2?family=News+Cycle:wght@400;700&family=Staatliches&display=swap');
 
+$font-main: 'News Cycle', sans-serif;
+$font-head: 'Staatliches', cursive;
+$colour-pink: #ff665a;
+$colour-purple: #7D407D;
+$colour-beige: #333132;
 
 body {
-  font: 27px/1.4 'News Cycle', sans-serif;
-  color: #333132;
+  font: 27px/1.4 $font-main;
+  color: $colour-beige;
 }
 
 h1 {
-  font: 50px/2 'Staatliches', cursive;
-  color: #ff665a;
-  margin-top: 80px;
+  font: 50px/2 $font-head;
+  color: $colour-pink;
+  margin-top: 40px;
 }
 
 h2 {
-  font: 27px/1 'News Cycle', sans-serif;
-  color: #7D407D;
+  font: 27px/1 $font-main;
+  color: $colour-purple;
 }
 
 .footer-text {
-  font: 20px/3 'Staatliches', cursive;
+  font: 20px/3 $font-head;
   text-transform: uppercase;
+}
+
+section.results {
+  ul {
+    margin-top: 15px;
+  }
+  li {
+    font-size: 20px;
+    margin-top: 10px;
+  }
 }
