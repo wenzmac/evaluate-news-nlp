@@ -29,7 +29,6 @@ console.log(__dirname)
 // API URL variables
 let baseURL = 'https://api.meaningcloud.com/sentiment-2.1?key=';
 let apiKey = process.env.API_KEY;
-const inputText = document.getElementById('name').value;
 
 // get route
 app.get('/', function (req, res) {
@@ -48,7 +47,7 @@ app.get('/all', function (req, res) {
 })
 
 //POST request
-app.post('/all', async(req, res) => {
+app.post('/getSentiment', async(req, res) => {
   console.log(req.body.inputText)
   const apiData = await fetch(baseURL + apiKey + '&of=json&url=' + req.body.inputText + '&lang=en', {
     method: 'POST'
@@ -56,7 +55,7 @@ app.post('/all', async(req, res) => {
   try {
     const data = await apiData.json()
     console.log(apiData)
-    console.log("apiData +++++>" , data)
+    console.log("apiData +++++>", data)
     res.send(data);
   }
   catch (err) {

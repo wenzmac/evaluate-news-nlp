@@ -4,7 +4,7 @@ function handleSubmit(event) {
   //check what text was put into the form field
   if(Client.checkForName(inputText)){
     //Fetch request
-    fetch('http://localhost:8081/test',{
+    fetch('http://localhost:8081/getSentiment',{
       method: 'POST',
       cache: "no-cache",
       credentials: 'same-origin',

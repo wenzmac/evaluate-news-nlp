@@ -1,7 +1,7 @@
 import 'regenerator-runtime/runtime'
 
 const updateUI = async () => {
-  const request = await fetch('http://localhost:8081/all');
+  const request = await fetch('http://localhost:8081/getSentiment');
   try {
       const allData = await request.json();
       console.log(allData);
