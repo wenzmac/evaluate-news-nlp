@@ -7,18 +7,19 @@ $colour-purple: #7D407D;
 $colour-beige: #333132;
 
 body {
-  font: 27px/1.4 $font-main;
+  font: 25px/1.2 $font-main;
   color: $colour-beige;
 }
 
 h1 {
-  font: 50px/2 $font-head;
+  font: 50px/1.5 $font-head;
   color: $colour-pink;
-  margin-top: 40px;
+  margin-top: 30px;
 }
 
 h2 {
-  font: 27px/1 $font-main;
+  font: 25px/1 $font-main;
+  font-weight: bold;
   color: $colour-purple;
 }
 
