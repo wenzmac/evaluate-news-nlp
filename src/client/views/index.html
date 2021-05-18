@@ -27,7 +27,8 @@
             <section class="results">
                 <h2>So how's that sentiment?</h2>
                 <div id="results">
-                  <ul class="data-list">
+                  <p id="coming" class="hide">It's getting checked...</p>
+                  <ul id="data-list" class="data-list">
                     <li id="score_tag"></li>
                     <li id="agreement"></li>
                     <li id="confidence"></li>
@@ -42,7 +43,6 @@
             <hr>
             <p class="footer-text">Made by Wendy Mackay</p>
         </footer>
-        <!--
         <script>
           // Check that service workers are supported
           if ('serviceWorker' in navigator) {
@@ -51,6 +51,6 @@
               navigator.serviceWorker.register('/service-worker.js');
             });
           }
-        </script>-->
+        </script>
     </body>
 </html>

@@ -55,7 +55,7 @@ app.post('/getSentiment', async(req, res) => {
   try {
     const data = await apiData.json()
     console.log(apiData)
-    console.log("apiData +++++>", data)
+    console.log("::: apiData :::", data)
     res.send(data);
   }
   catch (err) {

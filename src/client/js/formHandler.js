@@ -3,7 +3,9 @@ function handleSubmit(event) {
   event.preventDefault()
   console.log("::: Form Submitted :::")
   //check what text was put into the form field
-  if(Client.checkForName(inputText)){
+  if(Client.checkForName(inputText)) {
+    document.getElementById('coming').classList.remove('hide')
+    document.getElementById('data-list').classList.add('hide')
     // Fetch request
     fetch('http://localhost:8081/getSentiment',{
       method: 'POST',
@@ -21,20 +23,16 @@ function handleSubmit(event) {
     })
     .then (function (response) {
         console.log("Updating UI")
+        document.getElementById('coming').classList.add('hide')
         const newScore_tag = Client.rankScore(response.score_tag);
         document.getElementById('score_tag').innerHTML = `Overall sentiment: ${newScore_tag}`
-        document.getElementById('agreement').innerHTML = `Agreeability: ${response.agreement}`
-        document.getElementById('confidence').innerHTML = `Confidence: ${response.confidence}`
+        document.getElementById('agreement').innerHTML = `Agreement: ${response.agreement}`
+        document.getElementById('confidence').innerHTML = `Confidence: ${response.confidence}/100`
         document.getElementById('irony').innerHTML = `Irony: ${response.irony}`
         document.getElementById('subjectivity').innerHTML = `Subjectivity: ${response.subjectivity}`
+        document.getElementById('data-list').classList.remove('hide')
     })
-    //.then((res) => res.json())
-    //.then(function(data){
-    //  console.log(data);
-      // Calls update user interface function
-    //  Client.updateUI(response);
-  //  });
-    }
+  }
   else {
     alert("Please enter a valid URL");
     console.log("Not valid url");
