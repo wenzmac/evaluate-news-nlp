@@ -1,5 +1,5 @@
 # Udacity Natural Language Processing Project
-This is project is was created as a part of the Udacity Front End Developer Nanodegree program.
+This project was created as a part of the Udacity Front End Developer Nanodegree program.
 
 ## Running the project
 This project uses Meaning Cloud Language Identification API.
